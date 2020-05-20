@@ -1,0 +1,77 @@
+@media all and (max-width: 800px) {
+  .nav { justify-content: space-around; }
+  .nav .nav__link{ flex-grow:1; }
+  }
+@media all and (max-width: 500px) {
+  .nav { flex-direction: column; }
+  }
+@media (min-width:320px) { .head { font-size: 2em; } }
+@media (min-width:481px) { .head { font-size: 3em; } }
+@media (min-width:641px) { .head { font-size: 4em; } }
+@media (min-width:961px) { .head { font-size: 5em; } }
+@media (min-width:1025px) { .head { font-size: 6em; } }
+@media (min-width:1281px) { .head { font-size: 7em; } }
+
+.nav {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+  right: 0;
+}
+
+.nav ul {
+	display: flex;
+  position: relative;
+  justify-content: space-around;
+	list-style-type: none;
+  background-color: #f1f1f1;
+  flex-grow: 1;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-button,
+.nav-close {
+	position: fixed;
+	top: 0;
+}
+
+.nav-button {
+	display: block;
+}
+
+.nav-close {
+	display: none;
+	left: 4em;
+}
+
+@media only screen and (min-width: 960px) {
+
+.nav {
+	display: block;
+	position: relative;
+	bottom: auto;
+	overflow: visible;
+}
+
+.nav-button {
+	display: none;
+}
+
+}
+
+@media only screen and (max-width: 959px) {
+
+.nav-button:hover + .nav,
+.nav:hover,
+.nav-button:hover + .nav + .nav-close,
+.nav:hover + .nav-close {
+	display: block;
+}
+
+}
